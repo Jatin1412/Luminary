@@ -1,8 +1,11 @@
-html,
-body {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html,
+body {
   background-color: #010101;
   color: #fff;
   font-family: "Inter", sans-serif;
@@ -33,6 +36,10 @@ body {
   color: #9ca3af;
 }
 
+section{
+  padding: 120px 0px;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -51,7 +58,7 @@ nav span {
   padding-left: 5px;
 }
 
-ul {
+header nav ul {
   display: flex;
   list-style: none;
   gap: 40px;
@@ -180,10 +187,6 @@ main {
   font-size: 14px;
 }
 
-.features {
-  margin: 20px 0 200px;
-}
-
 .feature {
   padding: 70px 0;
   display: flex;
@@ -268,8 +271,7 @@ main {
 
 /*-------  PRICING SECTION ------------------------------*/
 
-.pricing{
-  margin: 80px auto;
+.pricing-h{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -282,15 +284,18 @@ main {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 200;
+  margin-bottom: 20px;  
 }
 
 .p-h{
   font-size: 3.4em;
-  letter-spacing: -2px;
+  letter-spacing: -2.5px;
+  margin-bottom: 30px;
 }
 
-.pricing .p-h span{
-  
+.p-p{
+  margin-bottom: 30px;
+  font-weight: 200;
 }
 
 .pricing-toggle{
@@ -306,8 +311,19 @@ main {
     text-transform:uppercase;
     letter-spacing:2px;
     font-weight:600;
+    font-size: 12px;
 
     transition: color 1s;
+}
+
+.toggle-dis{
+  font-size: 11px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.toggle-dis.visible{
+  opacity: 0;
 }
 
 .toggle-text.active{
@@ -316,16 +332,16 @@ main {
 
 .switch{
 
-    width:72px;
-    height:40px;
+    width:50px;
+    height:28px;
 
     border-radius:999px;
 
     border:2px solid #9097a5;
 
-    background:#22272f;
+    background:#2a2e35;
 
-    padding:4px;
+    padding:3px;
 
     display:flex;
     align-items:center;
@@ -335,8 +351,8 @@ main {
 
 .switch-circle{
 
-    width:28px;
-    height:28px;
+    width:17px;
+    height:17px;
 
     background:#bfc6d2;
 
@@ -346,5 +362,192 @@ main {
 }
 
 .switch.active .switch-circle{
-    transform: translateX(32px);
+    transform: translateX(23px);
 }
+
+.pricing-grid{
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+
+    margin-top: 5rem;
+}
+
+.pricing-card{
+
+    background:#171b22;
+
+    border:1px solid #2d333d;
+
+    border-radius:30px;
+
+    padding:2.5rem;
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.pricing-card button{
+    margin-top:auto;
+}
+
+.pricing-card{
+    background: #171b22;
+    border: 1px solid #2d3440;
+    border-radius: 28px;
+
+    padding: 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: .35s ease;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.pricing-grid{
+  display: flex;
+  gap: 20px;
+}
+
+.card
+{
+  border: 2px solid rgb(75, 75, 75);
+}
+
+
+
+.Integrations{
+  text-align: center;
+}
+
+.i-t{
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.i-h{
+  font-size: 50px;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+
+.i-p{
+  width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.integrations-grid{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  margin-top: 56px;
+}
+
+.integration-item{
+  border: 1px solid rgb(75, 75, 75);
+  background-color: rgba(22, 26, 32, 0.55);
+  border-radius: 10px;
+  padding: 28px 20px;
+  text-align: center;
+}
+
+.integration-item .name{
+  text-transform: uppercase;
+  color: #9ca3af;
+  justify-items: center;
+  font-size: small;
+}
+
+.icon{
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 12px;
+}
+
+.icon i{
+      width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+    background-color: #2a2e35;
+    font-size: 22px;
+}
+
+.footer{
+  text-align: center;
+}
+
+.f-t{
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.f-h{
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.f-p{
+  margin-bottom: 0 auto;
+}
+
+.footer-btns{
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.f-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 80px;
+  width: 100%;
+  padding-top: 40px;
+  border-top: 1px solid rgb(75, 75, 75);
+}
+
+.f-links{
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.f-brand{
+  color: #7d8590;
+  text-transform: uppercase;
+}
+
+.f-nav .a{
+  text-decoration: none;
+  color: #7d8590;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.i-a{
+  color:rgb(75, 75, 75);
+  text-decoration: none;
+  font-size: 10px;
+}
+
+
