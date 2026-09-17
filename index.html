@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="stylesheets/style2.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -207,7 +207,24 @@
         </section>
     </main>
 
-    <script src="./scripts/script2.js"></script>
+    <script>
+        const toggle = document.querySelector(".switch");
+
+        const monthly = document.querySelector(".toggle-text:first-child");
+
+        const pricingDis = document.querySelector(".toggle-dis");
+
+        const annual = document.querySelector(".annual");
+
+        toggle.addEventListener("click", () => {
+          toggle.classList.toggle("active");
+          monthly.classList.toggle("active");
+          annual.classList.toggle("active");
+
+          pricingDis.classList.toggle("visible");
+        });
+        
+    </script>
 
 </body>
 </body>
